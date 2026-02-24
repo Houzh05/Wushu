@@ -1,0 +1,408 @@
+@charset "utf-8";
+*{ margin:0; padding:0;}
+a{ text-decoration:none;}
+li{list-style-type:none;}
+body{ background:url(../images/t1.png) top center; background-attachment:fixed;font-size:14px;font-family:arial;
+            font-family: "Microsoft YaHei", "SimSun", sans-serif; /* 正文通用字体 */
+            background-color: var(--light-white);
+            color: var(--dark-gray);
+            line-height: 1.6;
+        }
+
+/*头部*/
+.head {
+    width: 100%; /* 占满页面宽度 */
+    height: 60px; 
+    padding-top: 10px; 
+    background-color: rgba(255,255,255,0.9); /* 增加透明度，避免遮挡内容 */
+    position: fixed; /* 固定定位，脱离文档流，始终在顶部 */
+    top: 0; /* 距离页面顶部0px */
+    left: 0; /* 距离页面左侧0px */
+    z-index: 999; /* 设置层级，确保导航栏在其他内容上方 */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* 加个阴影，区分导航栏和内容 */
+    
+}
+.head .logo{float:left;}
+.head .logo img{height:70px;display:block;margin-right:20px;margin-left:20px;}
+.nav{width:1400px;height: 70px;margin: auto;background: #eed1d1;bottom: 200px;}
+.nav li{ float:left;margin-left:30px;text-align:center;}
+.nav li a{font-size:22px; color:#353535;line-height:70px;display: block;font-family: "KaiTi", "楷体", serif;}
+.nav li a:hover{background:#957a7a;color:#fbf302; text-decoration:none;}
+.droplist{ background: #eed1d1;box-shadow: #333;display: none;border-radius: 6px;overflow: hidden;}
+.nav li:hover .droplist{display: block;}
+/*中间内容*/
+.main{width:1300px;padding:50px;overflow:hidden;margin: 40px auto; background-color:rgba(255, 255, 255, 0.1);}
+.main_left{width:200px; height:auto; float:left;}
+.main_left .pic{width:190px;border:5px solid #ecb69b;}
+.main_left .pic img{width:190px;display:block;}
+.main_left .search{ width:200px;height:34px;margin-top:30px;}
+.main_left .search .btn{width:34px;height:34px;border:none;background:url(../images/search_btn.png);cursor:pointer;float:left;outline:none;}
+.main_left .search .text{display:block;background: rgba(255, 255, 255, 0.3); width:160px;height:34px;border:none;font-size:14px;color:#333;float:left;margin-left:6px;outline:none;}
+.left_nav{width:160px; height:auto; margin-top:30px;}
+.left_nav li{ background:url(../images/d1.png) left center no-repeat;padding-left:30px;line-height:30px;}
+.left_nav li a{font-size:19px; color:#666;font-family: "KaiTi", "楷体", serif; }
+.left_nav li a:hover{color:#000;}
+.main_right{width: 960px; height:auto; float:left;margin-left:40px;} 
+.main_right h2{font-size:24px; color:#000000; line-height:36px;text-align:center;    font-family: "KaiTi", "楷体", serif;}
+.main_right .jianjie img{width:100%;}
+.main_right .jianjie p{font-size:19px; color:#000000; line-height:2;text-indent:32px;    font-family: "KaiTi", "楷体", serif;}
+
+.main_right1{width: 960px; height:auto; margin:0 auto;} 
+.main_right1 h2{font-size:24px; color:#000000; line-height:36px;text-align:center;font-family: "KaiTi", "楷体", serif;}
+.main_right1 .jianjie img{width:100%;}
+.main_right1 .jianjie p{font-size:19px; color:#000000; line-height:2;text-indent:32px;font-family: "KaiTi", "楷体", serif;}
+
+/*底部*/
+.foot{width:100%; padding-top:20px;padding-bottom:20px; margin:auto; background:#A4504B;clear:both;}
+.foot p{font-size:16px;color:#fff; line-height:24px; text-align:center;}
+/*景点介绍*/
+.jingdian li{height:150px;padding:15px 0;border-bottom:1px dashed #000000;}
+.jingdian li img{width:240px;height:150px;float:left;margin-right:20px;}
+.jingdian li h3{margin-bottom:10px;}
+.jingdian a{font-size:15px; color:#8beae5; }
+.jingdian a:hover{ color:#e6e157; text-decoration:none;}
+/*风景欣赏*/
+.fengjing img{display:block;width:420px;height:280px;float:left;margin:20px;}
+
+
+
+.video-custom {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 3px solid #e6b800;
+    border-radius: 12px;
+}
+.video-custom {
+    width: 640px;
+    max-width: 100%;
+    height: auto;
+    /* 水平居中核心代码 */
+    display: block; /* 将视频转为块级元素（默认是行内块级），支持 margin 左右 auto 生效 */
+    margin: 20px auto; /* 上下间距20px（可修改为0、15px），左右 auto 实现水平居中 */
+}
+/*美食推荐*/
+.meishi{width:920px;margin:auto;}
+.meishi li{width: 250px;float:left;margin: 25px;}
+.meishi li img{width:250px;height:250px;}
+.meishi li p{text-align:center;}
+/*留言*/
+.liuyan{width:500px;margin:auto;}
+.liuyan p{line-height:30px;overflow:hidden;margin-top:20px;}
+.liuyan p span{display:block;width:100px;text-align:right;float:left;}
+.liuyan p input{display:block;width:400px;height:30px;border:none;float:left;background: #f1ee95;}
+.liuyan p textarea{display:block;width:400px;height:200px;border:none;float:left;background: #f1ee95;}
+.liuyan .btn{display:block;width:100px;height:30px;float:left;border:none;background:#000;color:#ffffff;margin-top:30px;margin-left:100px;cursor:pointer;}
+.liuyan .btn:hover{background:#f00;}
+ .btn {
+            padding: 8px 16px;
+            border-radius: 4px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-outline {
+            border: 1px solid var(--main-red);
+            color: var(--main-red);
+            background-color: transparent;
+        }
+
+        .btn-outline:hover {
+            background-color: var(--main-red);
+            color: white;
+        }
+
+        .btn-solid {
+            border: 1px solid var(--main-red);
+            background-color: var(--main-red);
+            color: white;
+        }
+
+        .btn-solid:hover {
+            background-color: #a80e26;
+            border-color: #a80e26;
+        }
+#backToTopBtn {
+    display: none; /* 初始状态隐藏按钮 */
+    position: fixed; /* 固定定位，使其不随页面滚动而移动位置 */
+    bottom: 20px; /* 距离页面底部20px */
+    right: 20px; /* 距离页面右侧20px */
+    background-color: #f45e5e; /* 背景颜色，这里设置为蓝色，可按需修改 */
+    color: white; /* 文字颜色为白色 */
+    border: none; /* 去除边框 */
+    border-radius: 5px; /* 圆角效果 */
+    padding: 10px 15px; /* 按钮内边距，调整按钮大小 */
+    cursor: pointer; /* 鼠标悬停变为手型指针 */
+}
+/* 当按钮被鼠标悬停时改变背景颜色 */
+#backToTopBtn:hover {
+    background-color: #ec6a6a;
+}
+        /* 5. 返回顶部按钮样式 */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background-color: var(--main-red);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 20px;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 998;
+        }
+
+        .back-to-top.active {
+            opacity: 1;
+            visibility: visible;
+        }
+/*页脚*/
+/*.foot{width:1300px; padding-top:20px;padding-bottom:20px; margin:auto; background:#000;clear:both;}
+.foot p{font-size:16px;color:#fff; line-height:24px; text-align:center;}*/
+.footer{
+    width:1300px;
+    height:180px;
+    background-color:#121312;
+    color:#f2f2f2;
+    padding:30px 90px;
+    box-sizing: border-box;
+    margin: 0 auto; /* 添加这一行 */
+    display: flex; /* 将.footer设置为flex布局，方便整体控制内部元素排列 */
+    justify-content: space-between; /* 让.left和.right在水平方向两端对齐分布 */
+}
+.footer>.left{
+    flex-direction: row; /* 修改为按列方向布局，方便内部元素垂直排列 */
+    display: flex; /* 将.left也设置为flex布局，便于其子元素.er内部更好地控制布局 */
+    width:500px;
+    border-right:5px solid rgb(93, 89, 89);
+}
+.footer>.left>.lx{
+    width:50%;
+    height:100%;
+    float:left;
+}
+.footer>.left>.lx>h1{
+    font-weight:600;
+}
+.footer>.left>.lx>p{
+    font-size:14px;
+    line-height:30px;
+    font-family: "KaiTi", "楷体", serif;
+}
+.footer>.left>.er{
+    width:50%;
+    height:100%;
+
+    display: flex;  /* 添加此行，将该元素设置为弹性容器 */
+    flex-direction: row; /* 确保内部元素按行方向排列，文字和图片水平排列 */
+    justify-content: flex-start; /* 从左边开始对齐 */
+    align-items: center; /* 让文字和图片在垂直方向上居中对齐 */
+
+}
+
+.footer>.left>.er>p {
+    font-size: 14px;
+    line-height: 1.2;
+    writing-mode: vertical-rl;  /* 添加此行，设置文字书写模式为垂直方向从右向左排列 */
+    text-orientation: upright;  /* 添加此行，确保文字方向正向 */
+    margin-right: 10px;
+}
+
+.footer>.left>.er>img {
+    width: 150px;
+    height: 150px;
+    margin: 20px; /* 添加此行，调整文字和图片的间距 */
+}
+.footer>.right{
+    width:450px;
+    padding-left:80px;
+}
+.footer>.right>h1{
+    font-weight:600;
+}
+.footer>.right>p{
+    font-size:14px;
+    line-height:30px;
+    font-family: "KaiTi", "楷体", serif;
+}
+.footer>.right>p:hover{
+    text-decoration:underline;
+    color:#d04cbc;
+}
+.footer>.left>.lx>p:hover{
+    text-decoration:underline;
+    color:#d04cc9;
+}
+.calligraphy {
+  font-family: "楷体", "KaiTi", serif;
+  font-weight: bold;
+}
+        :root {
+            /* 核心色调（中国风） */
+            --main-red: #C8102E; /* 暗红（武魂厚重感） */
+            --dark-gray: #333333; /* 深灰（正文沉稳） */
+            --light-white: #F5F2EB; /* 米白（宣纸质感） */
+            --golden: #ffcc23d6; /* 金色（点缀荣誉标签） */
+            --shadow-red: rgba(200, 16, 47, 0.541); /* 红色阴影（交互效果） */
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+            .logo img {
+            width: 80px;
+            height: 40px;
+            /* 替换为你的Logo图片，建议简化拳字或铁狮子剪影 */
+        }
+            .logo-text {
+            font-size: 20px;
+            color: var(--main-red);
+            font-weight: bold;
+        }
+ /* 3. 核心卡片区样式 */
+        .card-section {
+            padding: 80px 5%;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-size: 36px;
+            color: var(--main-red);
+            text-align: center;
+            margin-bottom: 60px;
+            position: relative;
+            font-family: "KaiTi", "楷体", serif;
+        }
+
+        .section-title::after {
+            content: "";
+            display: block;
+            width: 80px;
+            height: 3px;
+            background-color: var(--golden);
+            margin: 15px auto 0;
+        }
+
+        .card-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+        }
+
+        .card {
+            background-color: rgba(247, 213, 213, 0.4);
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px var(--shadow-red);
+        }
+
+        .card-img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            /* 替换为对应卡片的图片，分别为：镖师插画、拳种对比、器械组合、老照片 */
+        }
+
+        .card-content {
+            padding: 25px;
+        }
+
+        .card-title {
+            font-size: 24px;
+            color: var(--main-red);
+            margin-bottom: 15px;
+            font-family: "KaiTi", "楷体", serif;
+        }
+
+        .card-text {
+            font-size: 14px;
+            color: var(--dark-gray);
+            margin-bottom: 20px;
+            line-height: 1.8;
+        }
+
+        .card-text ul {
+            padding-left: 20px;
+        }
+
+        .card-text li {
+            list-style: disc;
+            margin-bottom: 8px;
+        }
+
+        .card-btn {
+            display: inline-block;
+            padding: 8px 20px;
+            font-size: 14px;
+        }
+
+        /* 4. 增值入口区样式 */
+        .extra-section {
+            padding: 60px 5%;
+            background-color: rgba(247, 213, 213, 0.5);
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .extra-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .extra-item {
+            text-align: center;
+            padding: 30px 20px;
+            background-color: rgba(255, 255, 255, 0.3);
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+            transition: box-shadow 0.3s ease;
+        }
+
+        .extra-item:hover {
+            box-shadow: 0 5px 15px var(--shadow-red);
+        }
+
+        .extra-icon {
+            font-size: 40px;
+            color: var(--main-red);
+            margin-bottom: 20px;
+        }
+
+        .extra-title {
+            font-size: 18px;
+            color: var(--dark-gray);
+            margin-bottom: 15px;
+            font-family: "KaiTi", "楷体", serif;
+        }
+
+        .extra-desc {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .extra-btn {
+            font-size: 14px;
+            padding: 6px 18px;
+            font-family: "KaiTi", "楷体", serif;
+        }

@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8" />
+    <title>沧州武术</title>
+    <link href="css/css.css" rel="stylesheet" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/swiper-bundle.min.css"> <!-- 引入swiper的CSS文件 -->
+    <style>
+        /* swiper轮播图容器样式 */
+       .swiper-container {
+            width: 1300px;
+            margin: 0 auto;
+            height: 50px;
+            margin-top: 90px;
+            margin-bottom: 550px; /* 与下方主体内容间隔一定距离 */
+        }
+
+        /* 轮播图中的图片样式 */
+       .swiper-slide img {
+            width: 100%;
+            height: 640px;
+            display: block;
+        }
+
+        /* 分页器样式 */
+       .swiper-pagination-bullet {
+            background-color: #ccc; /* 分页器小圆点默认颜色 */
+            opacity: 0; /* 透明度 */
+        }
+
+       .swiper-pagination-bullet-active {
+            background-color: #007bff; /* 当前选中分页器小圆点颜色 */
+        }
+        .swiper-pagination {
+    position: absolute;
+    bottom: 500px;
+}
+            @media (max-width: 1200px) {
+                .content-container {
+                    flex-direction: column;
+                }
+                
+                .carousel-container {
+                    width: 100%;
+                    height: auto;
+                }
+                
+                h1 {
+                    font-size: 2.8rem;
+                }
+            }
+            
+            @media (max-width: 768px) {
+                .nav ul {
+                    flex-direction: column;
+                    align-items: center;
+                }
+                
+                .nav li a:after {
+                    display: none;
+                }
+                
+                h1 {
+                    font-size: 2.2rem;
+                }
+                
+                .subtitle {
+                    font-size: 1.1rem;
+                }
+            }
+
+        /* 导航按钮（上一页、下一页）样式 */
+       .swiper-button-next
+       {
+        left: auto;
+        right: 220px;
+    color: #f18a8a; /* 按钮颜色 */
+    top: 50%; /* 垂直居中 */
+    transform: translateY(-50%);
+    font-size: 24px; /* 调整按钮字体大小，可根据实际效果微调 */
+    width: 40px; /* 调整按钮宽度，可根据实际效果微调 */
+    height: 40px; /* 调整按钮高度，可根据实际效果微调 */
+    line-height: 40px; /* 垂直方向文本居中 */
+    text-align: center;
+    background-color: rgb(250, 107, 107，0.8); /* 给按钮添加背景色，增加辨识度，透明度可调整 */
+    border-radius: 50%; /* 将按钮设置为圆形，可根据喜好改成其他形状 */
+    margin: 0 10px; /* 设置按钮与轮播图容器边缘的间距，可根据实际效果微调 */
+}
+       .swiper-button-prev {
+        left: 220px;
+        right: auto;
+    color: #f18a8a; /* 按钮颜色 */
+    top: 50%; /* 垂直居中 */
+    transform: translateY(-50%);
+    font-size: 24px; /* 调整按钮字体大小，可根据实际效果微调 */
+    width: 40px; /* 调整按钮宽度，可根据实际效果微调 */
+    height: 40px; /* 调整按钮高度，可根据实际效果微调 */
+    line-height: 40px; /* 垂直方向文本居中 */
+    text-align: center;
+    background-color: rgb(250, 107, 107，0.8); /* 给按钮添加背景色，增加辨识度，透明度可调整 */
+    border-radius: 50%; /* 将按钮设置为圆形，可根据喜好改成其他形状 */
+    margin: 0 10px; /* 设置按钮与轮播图容器边缘的间距，可根据实际效果微调 */
+}
+    </style>
+</head>
+<body>
+<div class="head">
+
+
+    <div class="nav">
+        <div class="logo">
+            <a href="https://www.ihchina.cn/project_details/13789/" target="_blank"><img src="images/logo.png"/></a>
+            <div class="logo-text calligraphy">
+                沧州武术·非遗传承
+            </div>
+        </div>
+        <ul class="nav li top">
+            <li><a href="index.html">首页</a></li>  
+            <li><a href="lishi.html">历史介绍</a>
+                <ul class="droplist">
+                    <li><a href="lishi.html">溯源</a></li>
+                </ul>             
+                <ul class="droplist">
+                    <li><a href="lishi.html">传奇</a></li>
+                </ul>
+                <ul class="droplist">
+                    <li><a href="lishi.html">传承</a></li>
+                </ul>            
+            </li>
+            <li><a href="quanzhong.html">拳种精粹</a>                                       
+            </li>
+            <li><a href="dili.html">武术器械</a>
+            </li>
+            <li><a href="jingdian.html">视频教程</a>
+                <ul class="droplist">
+                    <li><a href="liuhequan.html">六合拳</a></li>
+                </ul>             
+                <ul class="droplist">
+                    <li><a href="bajiquan.html">八极拳</a></li>
+                </ul>
+            </li>
+
+        </ul>
+    </div>
+</div>
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="images/b0.png"></div>
+        <div class="swiper-slide"><img src="images/b1.png"></div>
+        <div class="swiper-slide"><img src="images/b2.png"></div> <!-- 这里假设你有轮播图图片slide1.png等，根据实际图片路径和文件名修改 -->
+        <div class="swiper-slide"><img src="images/b3.png"></div>
+        <div class="swiper-slide"><img src="images/b4.png"></div>
+    </div>
+    <div class="swiper-pagination"></div> <!-- 用于显示分页器（小圆点形式的页码） -->
+    <div class="swiper-button-next"></div> <!-- 下一页按钮 -->
+    <div class="swiper-button-prev"></div> <!-- 上一页按钮 -->
+</div>
+<div class="main">
+    <div class="main_left">
+        <div class="pic">
+            <img src="images/pic1.png">
+        </div>
+        <div class="search">
+            <input type="button" class="btn">
+        	<input type="text"  class="text"/>
+        </div>
+        <div class="left_nav">
+            <ul>
+                <li><a href="index.html">首页 </a></li>  
+                <li><a href="lishi.html">历史介绍</a></li>
+                <li><a href="quanzhong.html">拳种精粹</a></li>
+                <li><a href="dili.html">武术器械</a></li>
+                <li><a href="jingdian.html">视频教程</a></li>
+            </ul>
+        </div>  
+    </div>
+    <div class="main_right">
+    	<div class="jianjie">
+        	<h2>沧州武术之乡</h2>
+            <hr align="center"/>
+             <p>
+                沧州市地处河北东南部，东临渤海，南接齐鲁，北倚京津，号称京津南大门，历史上是兵家必争之地、商贾云集之处、人犯流放之所，人们习练攻防格斗之术以求生存，
+                因此武术盛行。据统计，沧州在明清时期出过武进士、武举人1937名，乾隆年间已成为华北一带的武术重镇。1992年，沧州被正式命名为全国首批“武术之乡”
+            </p>
+            <p>
+沧州武术历史悠久，“源于春秋，兴于明朝，盛于清代，清末民初甚为繁盛”。沧州的武术门派众多，有八极、劈挂、燕青、八卦、六合、查滑、功力、太祖等53个拳种，占全国129个武术门派拳种
+的40.3%，各门派均具有刚猛剽悍、力度丰满、长短兼备、朴中寓鲜的风格特点。近几百年来，沧州武术精英荟萃，涌现出丁发祥、霍元甲、王子平等大批高人义士，为御外辱、扬国威、
+光大中华精神作出了巨大贡献。
+            </p>
+            <p>
+沧州武术独树一帜，除有代表性拳种的8大门派以外，疯魔棍、苗刀、戳脚、阴阳枪等拳械为沧州所独有。沧州武术还兼收并蓄，积累了雄厚的传统武术资源，近年来又吸纳跆拳道和规范武术套路
+等积极成分，取得新的发展。沧州武术刚劲威猛，技击性强，既有大开大阖的勇猛长势，又有推拨擒拿的绝技巧招，一招一式中无不体现着中华文化中阴阳、内外、刚柔、方圆、天地、义理等源于
+儒、释、道的理念和意蕴。
+            </p>
+            <p>
+习练沧州武术可以提高人的身体素质，锻炼人的精神品格，促进人的全面发展，丰富和完善中华乃至国际武术文化，还可以进一步带动武术培训、表演、竞赛、交流、节庆会展、
+器械生产交易等多种相关行业的发展。但是，沧州武术技艺以口传心授为主要传承方式，老拳师文化水平低，“学问都在肚子里”，而他们年事已高，许多绝技妙招濒临失传，急需保护和抢救。
+            </p>
+            <img src="images/1.jpg">
+        </div>
+    </div>
+    <!-- 3. 核心卡片区 -->
+    <section class="card-section">
+        <h2 class="section-title calligraphy">沧州武术核心亮点</h2>
+        <div class="card-container">
+            <!-- 卡片1：沧州武术简介 -->
+            <div class="card">
+                <img src="images/2.png" alt="沧州武术简介" class="card-img">
+                <div class="card-content">
+                    <h3 class="card-title calligraphy">沧州武术历史介绍</h3>
+                    <div class="card-text">
+                        <ul>
+                            <li>中国武术之乡，明清镖行南北必经之地</li>
+                            <li>50+拳种体系完整，尚武崇德的精神内核</li>
+                            <li>明清武举超500人，名人辈出，享誉武林</li>
+                            <li>2006年列入第一批国家级非物质文化遗产</li>
+                        </ul>
+                    </div>
+                    <a href="lishi.html" class="btn btn-outline card-btn">查看详情</a>
+                </div>
+            </div>
+
+            <!-- 卡片2：拳种精粹 -->
+            <div class="card">
+                <img src="images/3.png" alt="拳种精粹" class="card-img">
+                <div class="card-content">
+                    <h3 class="card-title calligraphy">拳种精粹</h3>
+                    <div class="card-text">
+                        <ul>
+                            <li>刚柔并济藏真意，沧州拳种各领风骚</li>
+                            <li>实战淬炼无虚架，招招皆含护镖硬功</li>
+                            <li>尚武崇德承文脉，北方武魂聚沧州</li>
+                            <li>薪火相传越百年，拳脉绵延中外扬</li>
+                        </ul>
+                    </div>
+                    <a href="quanzhong.html" class="btn btn-outline card-btn">拳种详解</a>
+                </div>
+            </div>
+
+            <!-- 卡片3：武术器械 -->
+            <div class="card">
+                <img src="images/4.png" alt="武术器械" class="card-img">
+                <div class="card-content">
+                    <h3 class="card-title calligraphy">武术器械</h3>
+                    <div class="card-text">
+                        <ul>
+                            <li>长器械：六合大枪、燕青四门刀、双手带</li>
+                            <li>短器械：八极双刀、判官笔、铁砂袋</li>
+                            <li>软器械：九节鞭、流星锤，灵活多变观赏性强</li>
+                            <li>拳械合一，先练拳后练器，技法相辅相成</li>
+                        </ul>
+                    </div>
+                    <a href="dili.html" class="btn btn-outline card-btn">器械图鉴</a>
+                </div>
+            </div>
+
+            <!-- 卡片4：文化亮点 -->
+            <div class="card">
+                <img src="images/1.png" alt="武术技法" class="card-img">
+                <div class="card-content">
+                    <h3 class="card-title calligraphy">武术技法</h3>
+                    <div class="card-text">
+                        <ul>
+                            <li>六合拳：内外六合，刚柔并济，整体发力</li>
+                            <li>八极拳：短打之王，刚猛迅猛，贴山靠绝技</li>
+                            <li>文有太极安天下，武有八极定乾坤</li>
+                            <li>传承脉络清晰，现代研习者遍布海内外</li>
+                        </ul>
+                    </div>
+                    <a href="jingdian.html" class="btn btn-outline card-btn">视频教程</a>
+                </div>
+            </div>
+        </div>
+    </section>
+<!-- 
+    <section class="extra-section">
+        <div class="extra-container">
+
+            <div class="extra-item">
+                <div class="extra-icon">
+                    <i class="fas fa-user-circle"></i>
+                </div>
+                <h3 class="extra-title calligraphy">武术名人堂</h3>
+                <p class="extra-desc">纵览古今沧州武术名家，聆听他们的武魂故事与传奇轶事</p>
+                <a href="#" class="btn btn-outline extra-btn">查看名人</a>
+            </div>
+
+            <div class="extra-item">
+                <div class="extra-icon">
+                    <i class="fas fa-handshake"></i>
+                </div>
+                <h3 class="extra-title calligraphy">现代传承</h3>
+                <p class="extra-desc">武术进校园、国际武术节，看沧州武魂在当代焕发新生</p>
+                <a href="#" class="btn btn-outline extra-btn">了解详情</a>
+            </div>
+
+            <div class="extra-item">
+                <div class="extra-icon">
+                    <i class="fas fa-question-circle"></i>
+                </div>
+                <h3 class="extra-title calligraphy">互动科普</h3>
+                <p class="extra-desc">30秒学会基础武术动作，解答你对沧州武术的所有疑问</p>
+                <a href="#" class="btn btn-outline extra-btn">参与互动</a>
+            </div>
+        </div>
+    </section> -->
+</div>
+    <div class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+<div class="foot">
+    <p>沧州武术</p>
+    <p>版权所有©  [2024-2026]部分权利归河北经贸大学武益团所有</p>
+</div>
+<script src="JavaScript/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper-container', {
+            autoplay: {
+                delay: 2000, // 自动播放的间隔时间，单位为毫秒，这里设置为3秒切换一次图片
+                disableOnInteraction: false // 用户操作（如点击切换、滑动切换）后是否继续自动播放，设置为false表示继续自动播放
+            },
+                effect: 'fade', // 新增：切换效果改为“淡入淡出”（即换图）
+    fadeEffect: {
+        crossFade: true // 淡入淡出时的交叉过渡，更自然
+    },
+            pagination: {
+                el: '.swiper-pagination', // 关联分页器元素
+            },
+            navigation: {
+                nextEl: '.swiper-button-next', // 关联下一页按钮元素
+                prevEl: '.swiper-button-prev', // 关联上一页按钮元素
+            },
+        });
+                // 返回顶部按钮
+        const backToTop = document.getElementById('backToTop');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTop.classList.add('active');
+            } else {
+                backToTop.classList.remove('active');
+            }
+        });
+
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
+<script src="JavaScript/2.js"></script>
+
+</body>
+</html>

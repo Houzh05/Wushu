@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>沧州武术</title>
+  <link rel="stylesheet" href="css/index.css">
+  <!-- <script src="js/script2.js"  defer></script> -->
+  <style>
+     @media (max-width: 1200px) {
+                .content-container {
+                    flex-direction: column;
+                }
+                
+                .carousel-container {
+                    width: 100%;
+                    height: auto;
+                }
+                
+                h1 {
+                    font-size: 2.8rem;
+                }
+            }
+            
+            @media (max-width: 768px) {
+                .nav ul {
+                    flex-direction: column;
+                    align-items: center;
+                }
+                
+                .nav li a:after {
+                    display: none;
+                }
+                
+                h1 {
+                    font-size: 2.2rem;
+                }
+                
+                .subtitle {
+                    font-size: 1.1rem;
+                }
+            }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- 2. 通栏横幅 -->
+    <section class="banner">
+        <h1 class="banner-title calligraphy">镖不喊沧州，武魂传千年</h1>
+        <p class="banner-subtitle">沧州武术——第一批国家级非物质文化遗产，50余种拳种汇聚，尚武崇德，薪火相传</p>
+        
+    </section>
+  </div>
+  <script>
+    // 定义目标页面数组
+    const pages = [
+      'index.html',
+    ];
+
+    // 添加点击事件监听器
+    document.addEventListener('click', function() {
+      // 随机选择一个页面URL
+      const randomPage = pages[Math.floor(Math.random() * pages.length)];
+      // 跳转到随机选择的页面
+      window.location.href = randomPage;
+    });
+  </script>
+</body>
+</html>

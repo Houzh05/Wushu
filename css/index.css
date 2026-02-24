@@ -1,0 +1,98 @@
+/* 1. 首先定义字体 */
+@font-face {
+  font-family: 'zhangcao';  /* 自定义字体名称 */
+  src: url('../font/逍遥.ttf') format('truetype'); /* 修正路径分隔符 */
+}
+:root {
+            /* 核心色调（中国风） */
+            --main-red: #C8102E; /* 暗红（武魂厚重感） */
+            --dark-gray: #333333; /* 深灰（正文沉稳） */
+            --light-white: #F5F2EB; /* 米白（宣纸质感） */
+            --golden: #D4AF37; /* 金色（点缀荣誉标签） */
+            --shadow-red: rgba(200, 16, 46, 0.2); /* 红色阴影（交互效果） */
+        }
+
+/* 2. 修改容器样式 */
+.container {
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  font-size: 5rem;
+  font-family: 'zhangcao', cursive; /* 使用自定义字体 */
+  text-shadow: 0 0 1px #f6f5f5, 0 0 4px #737364;
+}
+.nav.li{
+  font-family: 'zhangcao', cursive; /* 使用自定义字体 */
+  text-shadow: 0 0 1px #f6f5f5, 0 0 4px #737364;
+  font-size: 24px;
+}
+
+        .btn {
+            padding: 8px 16px;
+            border-radius: 4px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-outline {
+            border: 1px solid var(--main-red);
+            color: var(--main-red);
+            background-color: transparent;
+        }
+
+        .btn-outline:hover {
+            background-color: var(--main-red);
+            color: white;
+        }
+
+        .btn-solid {
+            border: 1px solid var(--main-red);
+            background-color: var(--main-red);
+            color: white;
+        }
+
+        .btn-solid:hover {
+            background-color: #a80e26;
+            border-color: #a80e26;
+        }
+
+        /* 2. 通栏横幅样式 */
+        .banner {
+            width: 100%;
+            height: 100vh;
+            /* margin-top: 70px; */
+            background: linear-gradient(rgba(251, 239, 239, 0.5), rgba(170, 90, 84, 0.5)), 
+                        url("../images/t1.png") no-repeat center center;
+            /* 替换为你的沧州武术全景图，建议大运河+武术演练场景 */
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            padding: 0 5%;
+        }
+
+        .banner-title {
+            font-size: 5vw;
+            margin-bottom: 20px;
+            color: rgb(12, 7, 7);
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .banner-subtitle {
+            font-size: 1.5vw;
+            margin-bottom: 40px;
+            max-width: 800px;
+            opacity: 0.9;
+        }
+
+        .banner-btn {
+            padding: 12px 30px;
+            font-size: 18px;
+            border-radius: 6px;
+        }

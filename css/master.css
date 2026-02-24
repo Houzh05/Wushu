@@ -1,0 +1,432 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body, html {
+  height: 100%;
+  overflow-x: hidden;
+}
+
+.page {
+
+  min-height: 100vh; /* 覆盖整个视口高度 */
+  width: 100%;
+  background: url(../images/bg.png) center / cover no-repeat fixed; /* 关键修改 */
+  /* 移除原有尺寸限制 */
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  
+}
+/* 新增导航栏容器样式 */
+/* 添加导航栏层级提升 */
+.nav {
+  position: relative;
+  z-index: 10; /* 确保导航栏在粒子效果之上 */
+}
+/* 移除最后一个链接的右边框 */
+.nav a:last-child {
+  border-right: none;
+}
+
+
+/* 修改导航列表样式 */
+.nav ul {
+  top: 38px;
+  margin-top: 5px;
+  margin-right: 20px;
+  text-align: center;
+  display: flex;
+
+  justify-content: center;
+ 
+
+}
+@font-face {
+  font-family: 'zhangcao';  /* 自定义字体名称 */
+  src: url('../font/逍遥.ttf') format('truetype'); /* 修正路径分隔符 */
+}
+.nav a {
+  font-weight: bold;
+  width: auto; /* 移除固定宽度 */
+  font-family: 'zhangcao', cursive;
+  text-decoration: none;
+  text-align: left; /* 改为居中 */
+  color: rgba(73, 73, 77, 0.986);
+  margin-top: 18px;
+  margin-right: -20px; /* 减小右边距 */
+  padding: 0 10px; /* 减小内边距 */
+  font-size: 20px;
+  transition: all 0.3s;
+  border-right: 1px solid #ddd;
+}
+
+
+/* 修改导航项样式 */
+.nav li {
+  z-index: 10;
+  margin: 0 10px; /* 项间距 */
+  font-size: 20px; /* 稍微减小字体 */
+  padding: 5px 0;
+  font-family: 'zhangcao', cursive; /* 使用自定义字体 */
+
+}
+
+/* 修改链接样式 */
+.nav a {
+  z-index: 10;
+  border-right: 1px solid #ddd;
+  padding: 0 15px;
+  white-space: nowrap; /* 防止文字换行 */
+}
+
+/* 移除最后一个链接的右边框 */
+.nav a:last-child {
+  border-right: none;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+table{
+  border-collapse:collapse;
+  border-spacing:0;}
+#particleCanvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+}
+li,ol,ul {list-style:none;}
+
+
+/* 粒子背景 */
+#particleCanvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+}
+
+/* 轮播容器 */
+.swiper {
+  bottom: 50px;
+  width: 1300px;
+  height: 600px;
+  margin: 50px auto 0;
+  position: relative;
+}
+
+.swiper-left,
+.swiper-right {
+  width: 570px;
+  height: 530px;
+  position: relative;
+}
+
+.swiper-left {
+  left: 40px;
+  margin-top: 80px;
+  margin-left: 20px;
+  float: left;
+
+  padding: 15px;
+}
+
+.swiper-right {
+  float: right;
+  left: 100px;
+  width: 400px;
+margin-bottom: 80px;
+  border-radius: 15px;
+
+  
+}
+
+/* 左侧轮播图样式 */
+.swiper-left a img {
+  height: 600px;
+  width: 600px;
+
+}
+
+.swiperItem {
+  width: 500px;
+  height: 500px;
+  position: absolute;
+  transition: 1s;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: default;
+}
+
+.def {
+  opacity: 0;
+  z-index: -1;
+}
+
+.c {
+  opacity: 1;
+  z-index: 1;
+  transform: perspective(450px) translateZ(-200px) translateX(230px);
+}
+
+.a {
+  opacity: 1;
+  z-index: 1;
+  transform: perspective(500px) translateZ(-200px) translateX(-230px);
+}
+
+.b {
+  opacity: 1;
+  z-index: 999;
+  transform: perspective(450px) translateZ(-100px) translateX(0px);
+}
+
+/* 右侧轮播图修改部分 */
+.swiperItems {
+  
+  width: 420px;
+  height: 700px;
+  position: absolute;
+  transition: 1s;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: default;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 图片容器 */
+.image-container {
+  height: 280px;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  border: 3px solid #c9a66b;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.image-container:hover img {
+  transform: scale(1.05);
+}
+
+/* 详细信息区域 */
+.description {
+  flex: 1;
+  padding: 20px 15px;
+  overflow-y: auto;
+  background: rgba(255, 250, 240, 0.95);
+  border-radius: 0 0 8px 8px;
+  margin-top: 15px;
+  border-top: 2px solid #c9a66b;
+}
+
+.description h3 {
+  color: #5d4037;
+  font-size: 26px;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #c9a66b;
+  text-align: center;
+  font-family: 'zhangcao', cursive;
+  letter-spacing: 2px;
+}
+
+.description p {
+  margin-bottom: 15px;
+  line-height: 1.7;
+  font-size: 17px;
+  background: rgba(245, 237, 219, 0.7);
+  padding: 12px;
+  border-radius: 8px;
+  border-left: 3px solid #c9a66b;
+}
+
+.description strong {
+  color: #8d6e63;
+  font-weight: bold;
+  margin-right: 8px;
+  display: inline-block;
+  width: 100px;
+}
+
+/* 控制点和时间轴 */
+.controls {
+  position: absolute;
+  bottom: -50px;
+  width: 100%;
+  text-align: center;
+}
+
+.points {
+  height: 20px;
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.points a {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: #c9a66b;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.points .show {
+  background-color: #8d6e63;
+  transform: scale(1.4);
+}
+
+.timeline-container {
+  width: 80%;
+  margin: 25px auto 0;
+  position: relative;
+}
+
+.timeline-marks {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px;
+}
+
+.timeline-marks .mark {
+  padding: 8px 15px;
+  background-color: rgba(201, 166, 107, 0.3);
+  border: 1px solid #c9a66b;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-family: 'zhangcao', cursive;
+  font-size: 18px;
+  color: #5d4037;
+}
+
+.timeline-marks .mark.active {
+  background-color: #c9a66b;
+  color: #fff;
+  font-weight: bold;
+  box-shadow: 0 0 10px rgba(201, 166, 107, 0.7);
+}
+
+/* 页脚 */
+.footer {
+  text-align: center;
+  padding: 30px 0 20px;
+  color: #5d4037;
+  font-size: 14px;
+  margin-top: 100px;
+  font-family: 'zhangcao', cursive;
+}
+
+/* 响应式设计 */
+@media (max-width: 1400px) {
+  .swiper {
+    width: 95%;
+  }
+  
+  .swiper-left,
+  .swiper-right {
+    bottom: 40px;
+    height: 450px;
+    width: 45%;
+  }
+}
+
+@media (max-width: 992px) {
+  .swiper {
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    align-items: center;
+  }
+  
+  .swiper-left,
+  .swiper-right {
+    float: none;
+    width: 30%;
+    margin: 20px auto;
+    left: 0;
+  }
+  
+  .swiper-left {
+    width: 600px;
+    margin-top: 20px;
+    margin-left: 0;
+  }
+  
+  .swiperItems {
+    position: relative;
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav ul {
+    margin-right: 0;
+    justify-content: center;
+  }
+  
+  .nav a {
+    font-size: 18px;
+    margin-top: 10px;
+    padding: 0 8px;
+  }
+  
+  .description p {
+    font-size: 15px;
+  }
+  
+  .timeline-marks {
+    flex-wrap: wrap;
+  }
+  
+  .timeline-marks .mark {
+    margin: 5px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .image-container {
+    height: 220px;
+  }
+  
+  .description h3 {
+    font-size: 22px;
+  }
+}
+
+/* 滚动条样式 */
+.description::-webkit-scrollbar {
+  width: 6px;
+}
+
+.description::-webkit-scrollbar-track {
+  background: rgba(201, 166, 107, 0.1);
+  border-radius: 4px;
+}
+
+.description::-webkit-scrollbar-thumb {
+  background: #c9a66b;
+  border-radius: 4px;
+}
