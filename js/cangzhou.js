@@ -348,7 +348,7 @@ async function loadCangzhouMap() {
         loadingElement.innerHTML = '<div class="loading-text">正在加载地图数据...</div>';
         loadingElement.style.display = 'block';
         
-        const response = await fetch('https://geo.datav.aliyun.com/areas_v3/bound/130900_full.json');
+const response = await fetch('./cangzhou_map.json');
         const geoJSON = await response.json();
         
         // 注册沧州市地图
